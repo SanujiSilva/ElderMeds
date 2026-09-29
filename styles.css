@@ -175,13 +175,6 @@ button, a { touch-action: manipulation; }
 .research-question { margin: 0 0 54px; padding: 27px 32px; display: grid; grid-template-columns: 190px 1fr; gap: 28px; align-items: center; border-radius: 6px; color: #fff; background: var(--teal-900); }
 .research-question span { color: #8fd6bd; font-size: 11px; font-weight: 850; letter-spacing: 0.1em; text-transform: uppercase; }
 .research-question p { margin: 0; color: #eef8f5; font-size: 17px; font-weight: 650; line-height: 1.55; }
-.solution-video { margin: 0 0 54px; overflow: hidden; display: grid; grid-template-columns: minmax(260px, 0.42fr) minmax(0, 1fr); align-items: stretch; border: 1px solid #214d48; border-radius: 6px; background: var(--teal-900); box-shadow: var(--shadow-lg); }
-.solution-video-copy { padding: 34px; display: flex; flex-direction: column; justify-content: center; }
-.solution-video-copy .eyebrow { color: #8fd6bd; }
-.solution-video-copy h3 { margin: 0 0 14px; color: #fff; font-size: 27px; }
-.solution-video-copy p:not(.eyebrow) { margin: 0; color: #d3e4df; font-size: 14px; }
-.video-frame { min-width: 0; display: grid; align-items: center; background: #071311; }
-.video-frame video { width: 100%; aspect-ratio: 16 / 9; display: block; background: #071311; object-fit: contain; }
 .objective-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
 .objective-grid article { min-height: 310px; padding: 28px; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 6px; background: #fff; box-shadow: var(--shadow-sm); }
 .objective-grid article > span { color: var(--blue); font-size: 13px; font-weight: 850; }
@@ -443,7 +436,7 @@ td { color: #48575e; font-size: 14px; }
   .tinted > * { max-width: none; }
   .section-heading { margin-bottom: 30px; }
   .section-heading p:not(.eyebrow) { font-size: 16px; }
-  .split, .component, .component-grid, .problem-solution-grid, .solution-video, .cards.three, .cards.two, .resource-grid, .safety-note { grid-template-columns: 1fr; }
+  .split, .component, .component-grid, .problem-solution-grid, .cards.three, .cards.two, .resource-grid, .safety-note { grid-template-columns: 1fr; }
   .split { gap: 30px; }
   .gap-grid, .objective-grid, .cards.four, .results-grid, .team-grid, .supervisors, .rules, .bands, .architecture, .presentation-grid, .resource-grid { grid-template-columns: 1fr; }
   .network { grid-template-columns: 1fr; }
