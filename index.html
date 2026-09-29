@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ElderMeds | Multimodal AI for Intelligent Medication Adherence</title>
+    <meta name="description" content="ElderMeds is a multimodal elder-care research platform integrating intelligent medication reminders, verified medication intake, medication-safety reasoning, emotional and cognitive support, risk-awareness, caregiver monitoring and conversational health-data access." />
+    <meta name="theme-color" content="#0f766e" />
+    <meta property="og:title" content="ElderMeds | Multimodal AI for Intelligent Medication Adherence" />
+    <meta property="og:description" content="A coordinated healthcare AI research platform for medication adherence, safety reasoning, caregiver monitoring, and retrieval-grounded access to longitudinal health records." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="/" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f766e'/%3E%3Cpath d='M18 36c8 10 20 12 29-3 5-8-1-19-12-16-5 1-8 5-9 9' fill='none' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M18 28h14M25 21v14' stroke='%2399f6e4' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" id="top">
+      <nav class="navbar" aria-label="Primary navigation">
+        <a class="brand" href="#home" aria-label="ElderMeds home">
+          <img class="brand-logo" src="public/images/logo.png" alt="" aria-hidden="true" />
+          <span><strong>ElderMeds</strong><small>SLIIT Research</small></span>
+        </a>
+        <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="#home">Home</a>
+          <details class="nav-dropdown">
+            <summary>Project Scope<span class="nav-chevron" aria-hidden="true"></span></summary>
+            <div class="nav-dropdown-menu">
+              <a href="#about">Literature Review</a>
+              <a href="#gap">Research Gap</a>
+              <a href="#research-problem-solution">Problem &amp; Solution</a>
+              <a href="#objectives">Research Objectives</a>
+              <a href="#methodology">Methodology</a>
+              <a href="#technology">Technologies</a>
+            </div>
+          </details>
+          <a href="#milestones">Milestones</a>
+          <a href="#documents">Documents</a>
+          <a href="#presentations">Presentations</a>
+          <a href="#achievements">Achievements</a>
+          <details class="nav-dropdown">
+            <summary>About Us<span class="nav-chevron" aria-hidden="true"></span></summary>
+            <div class="nav-dropdown-menu">
+              <a href="#supervision">Supervisors</a>
+              <a href="#team">Team Members</a>
+            </div>
+          </details>
+          <a href="#contact">Contact Us</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="home">
+        <img class="hero-image" src="public/images/eldermeds-hero.png" alt="An older adult managing medication with support from a caregiver" />
+        <div class="hero-overlay"></div>
+        <div class="hero-inner">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">SLIIT Research Project 2025-2026</p>
+            <h1>ElderMeds</h1>
+            <h2>Intelligent medication support, designed around older adults.</h2>
+            <p>A multimodal voice-vision assistant that brings medication adherence, safety reasoning, caregiver awareness, and supportive engagement into one connected research platform.</p>
+            <div class="hero-actions">
+              <a class="button primary" href="#components">Explore the Research</a>
+              <a class="button secondary" href="#paper">Read the Paper</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section split" id="about">
+        <div class="reveal"><p class="eyebrow">The Challenge</p><h2>Medication support needs more than reminders.</h2><p>Medication non-adherence in older adults can be shaped by polypharmacy, memory limitations, changing daily routines, visual or motor limitations, adverse-drug concerns, medication-safety questions, and emotional or social factors.</p><p>Traditional reminder systems mainly answer "When should I take my medicine?" ElderMeds goes further by connecting reminders, verification evidence, safety reasoning, engagement, caregiver visibility, and conversational access through one shared longitudinal context.</p></div>
+        <div class="comparison reveal">
+          <h3>Beyond Reminder Apps</h3>
+          <ul>
+            <li>What medicine should I take?</li><li>How many should I take?</li><li>Is this the expected medicine?</li><li>Was the intake workflow completed?</li><li>Is there a medication-safety concern?</li><li>Can my caregiver understand what happened?</li><li>Can I access records conversationally?</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section tinted" id="gap">
+        <div class="section-heading reveal"><p class="eyebrow">Research Gap</p><h2>From Fragmented Tools to One Coordinated Elder-Care Platform</h2><p>Many existing systems address medication reminders, recognition, safety, emotional support, disease-risk awareness, caregiver monitoring, or conversational health access separately. ElderMeds targets the fragmentation between these tools through shared patient and medication context.</p></div>
+        <div class="gap-grid reveal"><article>Medication Reminders</article><article>Medication Recognition</article><article>Medication Safety</article><article>Emotional Support</article><article>Disease Risk Awareness</article><article>Caregiver Monitoring</article><article>Conversational Health Access</article></div>
+      </section>
+
+      <section class="section" id="research-problem-solution">
+        <div class="section-heading reveal"><p class="eyebrow">Research Problem &amp; Solution</p><h2>Older adults need more than a medication alarm.</h2><p>The central problem is not simply forgetting a reminder. Older adults may need support to identify the correct medicine, take the prescribed quantity, understand potential safety concerns, remain emotionally and cognitively engaged, and share meaningful information with caregivers.</p></div>
+        <div class="problem-solution-grid reveal">
+          <article class="problem-panel">
+            <span>01 / The Problem</span>
+            <h3>Medication and wellbeing support remains fragmented.</h3>
+            <p>Most existing applications solve only one part of the care journey. Reminder apps usually depend on the user pressing a "Taken" button, while medicine recognition, safety checking, emotional support, risk-awareness, and caregiver monitoring operate as separate tools with separate records.</p>
+            <ul>
+              <li>The system cannot confirm that the correct medicine and quantity were presented.</li>
+              <li>Self-reported intake provides limited evidence and may not reveal missed, extra, or unexpected medicine.</li>
+              <li>Medication-safety advice may ignore allergies, interactions, chronic conditions, age, and polypharmacy.</li>
+              <li>Caregivers lack one understandable view of adherence, safety, engagement, and risk information.</li>
+              <li>Older adults must navigate several disconnected interfaces with little shared context.</li>
+            </ul>
+          </article>
+          <article class="solution-panel">
+            <span>02 / The Proposed Solution</span>
+            <h3>One coordinated, multimodal elder-care platform.</h3>
+            <p>ElderMeds connects four research components through shared, user-scoped longitudinal records. Voice, vision, deterministic rules, machine learning, and retrieval-grounded conversation work together while preserving clear decision-support boundaries.</p>
+            <ul>
+              <li>Routine-aware reminders guide the elder at an appropriate daily moment.</li>
+              <li>Computer vision checks pill count and medicine-identity evidence before intake is recorded.</li>
+              <li>Hybrid safety assessment combines personal clinical context with pharmacovigilance evidence.</li>
+              <li>Emotional and cognitive activities provide bounded, non-diagnostic daily engagement.</li>
+              <li>A unified dashboard gives elders and caregivers grounded access to permitted records.</li>
+            </ul>
+          </article>
+        </div>
+        <div class="research-question reveal"><span>Central Research Question</span><p>How can a single multimodal and explainable platform improve medication-adherence support for older adults by combining verified intake, personalized safety screening, emotional and cognitive engagement, caregiver awareness, and grounded access to longitudinal health records?</p></div>
+        <article class="solution-video reveal">
+          <div class="solution-video-copy">
+            <p class="eyebrow">System Demonstration</p>
+            <h3>See the proposed solution in action</h3>
+            <p>This demonstration shows how ElderMeds brings the four research components together in one accessible care experience for older adults and caregivers.</p>
+          </div>
+          <div class="video-frame">
+            <video controls preload="metadata" playsinline poster="public/images/media1-poster.jpg">
+              <source src="public/images/Media1.mp4" type="video/mp4" />
+              Your browser does not support embedded video.
+            </video>
+          </div>
+        </article>
+        <div class="network reveal"><div class="core">ELDERMEDS</div><span>Intelligent Medication Reminder</span><span>Medication Safety</span><span>Emotional & Cognitive Support</span><span>Risk Awareness</span><span>Caregiver Monitoring</span><span>Unified Conversational Dashboard</span></div>
+        <div class="cards four reveal">
+          <article><b>01</b><h3>Medication Reminder & Verified Intake</h3><p>Personalized scheduling, voice reminders, pill identification, dose verification, intake-motion evidence, and stock monitoring.</p></article>
+          <article><b>02</b><h3>Personalized Medication Safety</h3><p>Patient-specific clinical rules and pharmacovigilance machine learning combine to screen medication-safety concerns.</p></article>
+          <article><b>03</b><h3>Emotional & Cognitive Engagement</h3><p>Emotion-aware conversations, adaptive activities, reminiscence support, and bounded wellness review encourage engagement.</p></article>
+          <article><b>04</b><h3>Unified Conversational Dashboard</h3><p>Grounded health-record access, risk awareness, caregiver visibility, and confirmation-gated actions connect the platform.</p></article>
+        </div>
+      </section>
+
+      <section class="section scope-objectives" id="objectives">
+        <div class="section-heading reveal"><p class="eyebrow">Research Objectives</p><h2>Four objectives, one connected care experience</h2><p>The project is organized around four equally important objectives, with each component contributing evidence to the same longitudinal elder-care platform.</p></div>
+        <div class="objective-grid reveal">
+          <article><span>01</span><h3>Improve medication adherence</h3><p>Develop routine-aware reminders and multimodal verification that can identify dose-count and medicine-identity mismatches before recording intake.</p><a href="#components">Verified intake component &#8594;</a></article>
+          <article><span>02</span><h3>Strengthen medication-safety awareness</h3><p>Combine patient-specific deterministic checks with population-level pharmacovigilance evidence in an explainable decision-support workflow.</p><a href="#components">Medication-safety component &#8594;</a></article>
+          <article><span>03</span><h3>Support emotional and cognitive engagement</h3><p>Provide bounded conversations, adaptive cognitive activities, and consent-based reminiscence features without presenting diagnostic conclusions.</p><a href="#components">Engagement component &#8594;</a></article>
+          <article><span>04</span><h3>Unify access to care information</h3><p>Enable validated, user-scoped conversational access to medication, adherence, safety, engagement, caregiver, and risk-awareness records.</p><a href="#components">Dashboard component &#8594;</a></article>
+        </div>
+      </section>
+
+      <section class="section tinted" id="components">
+        <div class="section-heading reveal"><p class="eyebrow">Research Components</p><h2>Four equally important parts of one care platform</h2><p>Each component addresses a distinct challenge faced by older adults and caregivers. Together, they create a continuous loop from medication planning and verification to safety, daily engagement, and understandable health-record access.</p></div>
+        <div class="component-grid">
+          <article class="research-component reveal">
+            <header><span>Component 01</span><h3>Intelligent Medication Reminder & Verified Intake</h3></header>
+            <p>Moves beyond alarm-based reminders by checking what medicine is present, whether the dose is correct, and whether the intake workflow was completed.</p>
+            <dl>
+              <div><dt>Research focus</dt><dd>Medication adherence and objective intake verification</dd></div>
+              <div><dt>Core approach</dt><dd>Routine-aware scheduling and a five-gate Medication Intake Monitoring and Verification workflow</dd></div>
+              <div><dt>Intelligence</dt><dd>YOLO11n pill counting, visual medicine-identity retrieval, and MediaPipe hand-to-mouth analysis</dd></div>
+              <div><dt>Delivers</dt><dd>Correct, underdose, overdose, missing, or unexpected-medicine outcomes with adherence, stock, and caregiver updates</dd></div>
+            </dl>
+            <div class="component-explanation">
+              <h4>How it works</h4>
+              <ol>
+                <li><strong>Plan:</strong> Reminder times are calculated from the elder's breakfast, lunch, dinner, and sleep routines instead of using unrelated fixed alarms.</li>
+                <li><strong>Check:</strong> The user photographs the tablets. YOLO11n counts them while visual features and reference matching provide medicine-identity evidence.</li>
+                <li><strong>Verify:</strong> The detected medicines and quantities are compared with the active prescription, followed by hand-to-mouth motion analysis and manual swallowing confirmation.</li>
+                <li><strong>Record:</strong> The dose result is saved, tablet stock is updated, and important mismatches or low-stock conditions can be surfaced to the caregiver.</li>
+              </ol>
+              <p class="component-impact"><strong>Practical value</strong> It provides stronger adherence evidence than a user simply tapping a "Taken" button, while still acknowledging that camera-observed motion does not prove swallowing.</p>
+            </div>
+            <div class="component-tags"><span>Computer Vision</span><span>Voice</span><span>YOLO11n</span><span>MediaPipe</span></div>
+          </article>
+
+          <article class="research-component reveal">
+            <header><span>Component 02</span><h3>Personalized Medication-Safety Assessment</h3></header>
+            <p>Evaluates medication concerns using the individual patient's health context together with evidence learned from population-level adverse-event records.</p>
+            <dl>
+              <div><dt>Research focus</dt><dd>Explainable, patient-aware medication-safety decision support</dd></div>
+              <div><dt>Core approach</dt><dd>Hybrid scoring with 60% deterministic clinical rules and 40% calibrated pharmacovigilance ML evidence</dd></div>
+              <div><dt>Intelligence</dt><dd>Allergy, interaction, condition, age, polypharmacy, renal and hepatic checks combined with FAERS modelling</dd></div>
+              <div><dt>Delivers</dt><dd>Safe, Warning, or Dangerous screening with contributing factors and auditable explanations</dd></div>
+            </dl>
+            <div class="component-explanation">
+              <h4>How it works</h4>
+              <ol>
+                <li><strong>Normalize:</strong> Medicine names are standardized and matched with structured medication knowledge before the assessment begins.</li>
+                <li><strong>Personalize:</strong> Deterministic rules inspect allergies, drug interactions, previous reactions, chronic conditions, age, polypharmacy, and renal or hepatic considerations.</li>
+                <li><strong>Estimate:</strong> A calibrated model adds population-level evidence learned from 528,000 processed FAERS adverse-event records.</li>
+                <li><strong>Explain:</strong> Rule and model evidence are combined into a bounded safety category with the main contributing factors retained for review.</li>
+              </ol>
+              <p class="component-impact"><strong>Practical value</strong> It makes the screening result traceable and patient-aware, but remains decision support rather than an individual causal prediction or prescribing decision.</p>
+            </div>
+            <div class="component-tags"><span>Hybrid AI</span><span>FAERS</span><span>DDInter</span><span>Explainability</span></div>
+          </article>
+
+          <article class="research-component reveal">
+            <header><span>Component 03</span><h3>Emotional & Cognitive Engagement</h3></header>
+            <p>Supports everyday wellbeing through brief, accessible interactions designed for companionship, cognitive stimulation, reflection, and continuity.</p>
+            <dl>
+              <div><dt>Research focus</dt><dd>Non-diagnostic emotional support and adaptive cognitive engagement</dd></div>
+              <div><dt>Core approach</dt><dd>TALK, PLAY, REMEMBER, and REVIEW experiences tailored by preferences, recent activity, and conversation context</dd></div>
+              <div><dt>Intelligence</dt><dd>Emotion classification, bounded five-turn conversations, activity recommendation, and consent-based remembered topics</dd></div>
+              <div><dt>Delivers</dt><dd>Supportive acknowledgements, varied cognitive activities, Life Book memories, and non-clinical wellness summaries</dd></div>
+            </dl>
+            <div class="component-explanation">
+              <h4>How it works</h4>
+              <ol>
+                <li><strong>Talk:</strong> A short five-turn conversation accepts voice, typed responses, or quick replies and uses emotion cues to select an appropriate supportive response.</li>
+                <li><strong>Play:</strong> Cognitive activities are adapted using the elder's preferences, recent choices, difficulty mode, and variety controls to avoid repetition.</li>
+                <li><strong>Remember:</strong> Life Book, Good Deeds or Pin Potha, and consent-based remembered topics support positive reminiscence while selected photos remain local.</li>
+                <li><strong>Review:</strong> Engagement history is summarized within non-clinical boundaries so the user and caregiver can observe patterns without diagnostic labels.</li>
+              </ol>
+              <p class="component-impact"><strong>Practical value</strong> It encourages regular conversation, meaningful recall, and cognitive activity while treating emotion classification as a support signal, not a mental-health diagnosis.</p>
+            </div>
+            <div class="component-tags"><span>Emotion AI</span><span>TALK</span><span>PLAY</span><span>REMEMBER</span></div>
+          </article>
+
+          <article class="research-component reveal">
+            <header><span>Component 04</span><h3>Unified Conversational Dashboard</h3></header>
+            <p>Turns records from every ElderMeds module into grounded answers, practical summaries, caregiver visibility, and carefully controlled actions.</p>
+            <dl>
+              <div><dt>Research focus</dt><dd>Secure conversational access to longitudinal elder-care information</dd></div>
+              <div><dt>Core approach</dt><dd>User-scoped retrieval, schema-restricted NL2SQL, trusted-source RAG, and confirmation-gated action execution</dd></div>
+              <div><dt>Intelligence</dt><dd>Local Llama 3 responses grounded only in validated records, with diabetes, stroke, and hypertension risk-awareness models</dd></div>
+              <div><dt>Delivers</dt><dd>Medication, adherence, safety, engagement, caregiver, and risk summaries with redaction and audit trails</dd></div>
+            </dl>
+            <div class="component-explanation">
+              <h4>How it works</h4>
+              <ol>
+                <li><strong>Understand:</strong> A natural-language question is interpreted against an allowlisted schema covering permitted ElderMeds record domains.</li>
+                <li><strong>Validate:</strong> Generated SQL is restricted to safe SELECT operations, parameterized by user identity, and checked before database execution.</li>
+                <li><strong>Ground:</strong> Retrieved rows are redacted where necessary and supplied to a local Llama 3 model that must answer from the available evidence.</li>
+                <li><strong>Act safely:</strong> Requested changes are converted into structured actions, shown in plain language, executed only after confirmation, and written to the audit trail.</li>
+              </ol>
+              <p class="component-impact"><strong>Practical value</strong> It gives elders and caregivers one understandable access point for records and risk-awareness results without allowing unrestricted database queries or autonomous clinical actions.</p>
+            </div>
+            <div class="component-tags"><span>NL2SQL</span><span>RAG</span><span>Llama 3</span><span>Risk Awareness</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="architecture">
+        <div class="section-heading reveal"><p class="eyebrow">Architecture</p><h2>Layered System Architecture</h2></div>
+        <div class="architecture reveal"><article><b>Layer 1</b><h3>Mobile / User Layer</h3><p>React Native, Expo: scheduling, camera capture, voice interaction, safety results, emotional support, risk-awareness, caregiver interface.</p></article><article><b>Layer 2</b><h3>Backend / Application</h3><p>Node.js, Express: authentication, orchestration, access validation, deterministic safety logic, persistence, audit handling.</p></article><article><b>Layer 3</b><h3>AI / ML Services</h3><p>FastAPI: YOLO11n, NLP, safety ML, emotion classification, disease-risk models, local LLM, explainable AI.</p></article><article><b>Layer 4</b><h3>Shared Data Layer</h3><p>PostgreSQL, Supabase: profiles, routines, medications, adherence events, allergy histories, emotional sessions, alerts, predictions, audit records.</p></article></div>
+      </section>
+
+      <section class="section tinted" id="methodology">
+        <div class="section-heading reveal"><p class="eyebrow">Methodology</p><h2>Persist, Validate, Retrieve, Explain</h2><p>Each module writes structured evidence to PostgreSQL tables. The dashboard retrieves records through deterministic summary queries or validated open-ended conversational paths, allowing cross-module context without direct in-memory coupling.</p></div>
+        <div class="cards three reveal"><article><h3>Agentic Action Layer</h3><p>Conversational request -> structured action -> plain-language summary -> user confirmation -> execution -> audit log -> navigation to updated record.</p></article><article><h3>Trusted Health-Advice Retrieval</h3><p>Guideline-style questions use curated WHO, CDC, American Heart Association, and Sri Lanka NCD-related sources. The local LLM is constrained to retrieved evidence and recorded risk context.</p></article><article><h3>Disease Risk-Awareness</h3><p>Diabetes, stroke, and hypertension outputs are trained ML classification results used for non-diagnostic user awareness, not autonomous diagnosis.</p></article></div>
+      </section>
+
+      <section class="section" id="milestones">
+        <div class="section-heading reveal"><p class="eyebrow">Milestones</p><h2>Project milestones</h2><p>The main academic submissions and research deliverables completed throughout the ElderMeds project.</p></div>
+        <div class="milestone-track reveal">
+          <article class="complete"><span>01</span><div><small>Completed</small><h3>TAF Submission</h3><p>Topic assessment documentation defining the research domain, initial problem, scope, and proposed direction.</p></div></article>
+          <article class="complete"><span>02</span><div><small>Completed</small><h3>Proposal Report &amp; Presentation</h3><p>Formal research proposal covering the gap, objectives, methodology, architecture, and four component plans.</p></div></article>
+          <article class="complete"><span>03</span><div><small>Completed</small><h3>Progress Presentation I</h3><p>Initial implementation progress, datasets, early models, interfaces, and component-level development evidence.</p></div></article>
+          <article class="complete"><span>04</span><div><small>Completed</small><h3>Progress Presentation II</h3><p>Integrated workflows, model evaluation, database persistence, and cross-component system progress.</p></div></article>
+          <article class="complete"><span>05</span><div><small>Completed</small><h3>Final Report</h3><p>Consolidated technical report documenting implementation, evaluation, scientific boundaries, and future work.</p></div></article>
+          <article class="complete"><span>06</span><div><small>Completed</small><h3>Final Presentation</h3><p>Complete presentation of the ElderMeds platform, research contributions, results, limitations, and demonstration.</p></div></article>
+          <article class="current"><span>07</span><div><small>Current deliverable</small><h3>Research Website</h3><p>Public research showcase containing the project scope, components, milestones, documents, team, and achievements.</p></div></article>
+          <article class="complete"><span>08</span><div><small>Accepted for presentation and publication</small><h3>Research Paper</h3><p>Paper ICSCDS-018 accepted for ICSCDS 2026 conference presentation and proceedings publication.</p></div></article>
+        </div>
+      </section>
+
+      <section class="section" id="results">
+        <div class="section-heading reveal"><p class="eyebrow">Evaluation</p><h2>Results Reported by Evidence Type</h2><p>ElderMeds does not present one whole-system accuracy. Each metric remains tied to its subsystem, dataset, and validation scope.</p></div>
+        <div class="results-grid reveal" id="resultsGrid"></div>
+        <div class="table-wrap reveal"><table><caption>Disease-risk prediction results used only for bounded risk-awareness</caption><thead><tr><th>Model</th><th>Algorithm</th><th>Accuracy</th><th>Precision</th><th>Recall</th><th>F1</th><th>ROC-AUC</th></tr></thead><tbody><tr><td>Diabetes</td><td>XGBoost</td><td>0.7427</td><td>0.7195</td><td>0.7954</td><td>0.7556</td><td>0.8204</td></tr><tr><td>Stroke</td><td>Logistic Regression</td><td>0.7466</td><td>0.1384</td><td>0.8000</td><td>0.2360</td><td>0.8426</td></tr><tr><td>Hypertension</td><td>Decision Tree</td><td>0.5205</td><td>0.7226</td><td>0.5405</td><td>0.6184</td><td>0.5031</td></tr></tbody></table></div>
+      </section>
+
+      <section class="section tinted" id="technology">
+        <div class="section-heading reveal"><p class="eyebrow">Technology</p><h2>Technology, Data Sources & Responsible AI</h2></div>
+        <div class="tech-cloud reveal"><span>React Native</span><span>Expo</span><span>Node.js</span><span>Express</span><span>FastAPI</span><span>PostgreSQL</span><span>Supabase</span><span>YOLO11n</span><span>MediaPipe</span><span>OpenCV</span><span>MiniLM</span><span>Llama 3</span><span>RxNorm</span><span>WHO ATC</span><span>SIDER</span><span>DDInter</span><span>FAERS</span><span>SHAP</span><span>LIME</span><span>RAG</span></div>
+        <div class="safety-note reveal"><strong>Responsible use</strong><p>Medication-safety outputs are decision-support signals. Disease-risk outputs are awareness aids. Emotion labels are non-diagnostic. ElderMeds is not intended for autonomous clinical diagnosis or prescribing.</p></div>
+      </section>
+
+      <section class="section" id="presentations">
+        <div class="section-heading reveal"><p class="eyebrow">Presentations</p><h2>Project presentations</h2><p>The presentation series documents how ElderMeds progressed from its initial proposal through component development, integrated evaluation, and final research communication.</p></div>
+        <div class="presentation-grid reveal">
+          <article><span>01</span><h3>Proposal Presentation</h3><p>Research problem, gap, objectives, proposed methodology, and the initial four-component architecture.</p><small>Project foundation</small></article>
+          <article><span>02</span><h3>Progress Presentation I</h3><p>Early component implementation, data preparation, architecture decisions, and initial model development.</p><small>Component development</small></article>
+          <article><span>03</span><h3>Progress Presentation II</h3><p>Integrated workflows, evaluation evidence, shared-data persistence, and responsible-AI boundaries.</p><small>System integration</small></article>
+          <article><span>04</span><h3>Final Presentation</h3><p>Complete ElderMeds platform, research contributions, subsystem results, limitations, and future validation work.</p><small>Research completion</small></article>
+        </div>
+        <div class="presentation-action reveal" id="presentationAction"></div>
+      </section>
+
+      <section class="section achievements" id="achievements">
+        <div class="section-heading reveal"><p class="eyebrow">Achievements</p><h2>International conference acceptance</h2><p>ElderMeds has been selected for presentation and publication at ICSCDS 2026.</p></div>
+        <article class="acceptance-card reveal">
+          <div class="acceptance-mark"><span>ICSCDS</span><strong>2026</strong></div>
+          <div class="acceptance-content">
+            <p class="acceptance-status">Conference Paper Accepted</p>
+            <h3>ElderMeds: A Multimodal Voice Vision Based Intelligent Assistant for Medication Adherence</h3>
+            <div class="acceptance-meta"><span><b>Paper ID</b>ICSCDS-018</span><span><b>Conference</b>4th International Conference of Sustainable Computing and Data Communication Systems</span><span><b>Dates</b>15-17 December 2026</span><span><b>Venue</b>Shree Venkateshwara Hi-tech Engineering College, India</span></div>
+            <p>The conference committee accepted the research article for presentation and publication in the ICSCDS Conference Proceedings.</p>
+            <a class="button primary" href="/public/documents/Acceptance-letter-ICSCDS-018.pdf" target="_blank" rel="noopener noreferrer">View Acceptance Letter &#8599;</a>
+          </div>
+        </article>
+      </section>
+
+      <section class="section tinted" id="about-us">
+        <div class="section-heading reveal"><p class="eyebrow">Team</p><h2>The people behind ElderMeds</h2><p>A multidisciplinary undergraduate research team from the Sri Lanka Institute of Information Technology, guided by academic supervision.</p><p class="group-id"><span>Research Group</span><strong>R26-SE-028</strong></p></div>
+        <div class="team-block reveal" id="supervision">
+          <h3>Supervision</h3>
+          <div class="team-grid supervisors" id="supervisorGrid"></div>
+        </div>
+        <div class="team-block reveal" id="team">
+          <h3>Research Team Members</h3>
+          <div class="team-grid" id="teamGrid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="documents">
+        <div class="section-heading reveal"><p class="eyebrow">Documents</p><h2>Research documents</h2><p>Access the ElderMeds paper, conference acceptance, reports, and supporting project documentation.</p></div>
+        <div class="resource-grid reveal" id="resourceGrid"></div>
+      </section>
+
+      <section class="section tinted" id="paper">
+        <div class="paper-space reveal">
+          <div>
+            <p class="eyebrow">Research Paper</p>
+            <h2>View the ElderMeds Research Paper</h2>
+            <p>ElderMeds: A Multimodal Voice Vision Based Intelligent Assistant for Medication Adherence</p>
+            <div id="paperActions" class="hero-actions"></div>
+          </div>
+          <div id="paperViewer" class="paper-viewer" aria-label="Research paper preview"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading reveal"><p class="eyebrow">Scientific Boundaries</p><h2>Limitations & Future Work</h2></div>
+        <div class="cards two reveal"><article><h3>Research Limitations</h3><p>Pill counting used a held-out set from the same public manifest; independent external validation is still required. Emotion evaluation used a 140-response frozen domain set. Medication-safety controller labels are proxy labels, not clinician-adjudicated clinical ground truth. Stroke has low precision. Hypertension shows near-chance discrimination.</p></article><article><h3>Future Work</h3><p>Priorities include independently sourced pill-counting cohorts, varied devices and illumination, broader pill morphologies and occlusion tests, larger older-adult emotion datasets, blinded clinician/pharmacist medication-safety studies, stronger disease-risk datasets, usability evaluation, and real-world validation.</p></article></div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="contact-copy reveal"><p class="eyebrow">Contact Us</p><h2>Connect with the ElderMeds team</h2><p>Send an inquiry about the research, system architecture, academic collaboration, or conference paper.</p><div class="contact-detail"><span>Institution</span><strong>Sri Lanka Institute of Information Technology</strong><small>Malabe, Sri Lanka</small></div></div>
+        <form class="contact-form reveal" id="contactForm">
+          <div class="form-row"><label for="contactName">Name</label><input id="contactName" name="name" type="text" autocomplete="name" required /></div>
+          <div class="form-row"><label for="contactEmail">Email</label><input id="contactEmail" name="email" type="email" autocomplete="email" required /></div>
+          <div class="form-row"><label for="contactSubject">Subject</label><select id="contactSubject" name="subject"><option>Research inquiry</option><option>Academic collaboration</option><option>Conference paper</option><option>Project demonstration</option></select></div>
+          <div class="form-row"><label for="contactMessage">Message</label><textarea id="contactMessage" name="message" rows="4" required></textarea></div>
+          <button class="button primary" type="submit">Send Inquiry</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div><a class="brand" href="#home"><img class="brand-logo" src="public/images/logo.png" alt="" aria-hidden="true" /><span><strong>ElderMeds</strong><small>SLIIT Research</small></span></a><p>A coordinated multimodal elder-care research platform for medication adherence, safety reasoning, supportive engagement, and grounded health-record access.</p></div>
+      <div><h3>Quick Links</h3><a href="#about">About</a><a href="#components">Components</a><a href="#results">Results</a><a href="#team">Team</a></div>
+      <div><h3>Research Links</h3><a href="#documents">Documents</a><a href="#presentations">Presentations</a><a href="#achievements">Achievements</a><a href="#paper">Research Paper</a></div>
+      <p class="copyright">&copy; 2026 ElderMeds Research Team. All rights reserved.</p>
+    </footer>
+    <button class="to-top" aria-label="Scroll to top" title="Back to top">&#8593;</button>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
