@@ -9,7 +9,9 @@ window.addEventListener("beforeunload", () => {
 });
 
 window.addEventListener("pageshow", () => {
-  window.scrollTo(0, 0);
+  const target = document.getElementById(location.hash.slice(1));
+  if (target) target.scrollIntoView();
+  else window.scrollTo(0, 0);
 });
 
 const results = [
@@ -52,6 +54,7 @@ function setActiveNavigation(sectionId) {
 navToggle.addEventListener("click", () => {
   const open = navLinks.classList.toggle("open");
   navToggle.setAttribute("aria-expanded", String(open));
+  navToggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
 });
 navLinks.addEventListener("click", (event) => {
   const link = event.target.closest("a[href^='#']");
@@ -59,12 +62,13 @@ navLinks.addEventListener("click", (event) => {
   const target = document.querySelector(link.getAttribute("href"));
   if (!target) return;
   event.preventDefault();
-  target.scrollIntoView({ behavior: "smooth", block: "start" });
+  target.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", block: "start" });
   history.pushState(null, "", link.getAttribute("href"));
   setActiveNavigation(target.id);
   navLinks.classList.remove("open");
   navDropdowns.forEach((dropdown) => dropdown.removeAttribute("open"));
   navToggle.setAttribute("aria-expanded", "false");
+  navToggle.setAttribute("aria-label", "Open navigation");
 });
 navDropdowns.forEach((dropdown) => {
   dropdown.addEventListener("toggle", () => {
@@ -73,6 +77,11 @@ navDropdowns.forEach((dropdown) => {
 });
 document.addEventListener("click", (event) => {
   if (!navLinks.contains(event.target)) navDropdowns.forEach((dropdown) => dropdown.removeAttribute("open"));
+  if (!navLinks.contains(event.target) && !navToggle.contains(event.target)) {
+    navLinks.classList.remove("open");
+    navToggle.setAttribute("aria-expanded", "false");
+    navToggle.setAttribute("aria-label", "Open navigation");
+  }
 });
 
 document.querySelector("#resultsGrid").innerHTML = results.map(([title, metric, value, note]) => `<article class="metric"><span>${title}</span><strong>${value}</strong><b>${metric}</b><p>${note}</p></article>`).join("");
@@ -135,9 +144,22 @@ document.querySelector("#paperViewer").innerHTML = paperUrl
   ? `<iframe title="ElderMeds research paper PDF" src="${paperUrl}"></iframe>`
   : `<div class="paper-placeholder"><strong>Research paper coming soon</strong><p>Add the PDF URL in <code>src/data/links.js</code>.</p></div>`;
 
+document.documentElement.classList.add("motion-ready");
+// Reveal individual cards rather than waiting for a tall mobile grid to enter view.
+document.querySelectorAll('.gap-grid.reveal, .cards.reveal, .results-grid.reveal, .architecture.reveal, .resource-grid.reveal, .milestone-track.reveal, .objective-grid.reveal, .team-block.reveal').forEach(group => {
+  group.classList.remove('reveal');
+  const children = group.matches('.team-block') ? group.querySelectorAll('.member') : group.children;
+  [...children].forEach((child, index) => {
+    child.classList.add('reveal');
+    child.style.setProperty('--reveal-delay', `${(index % 4) * 65}ms`);
+  });
+});
 const revealObserver = new IntersectionObserver((entries) => {
-  for (const entry of entries) if (entry.isIntersecting) entry.target.classList.add("visible");
-}, { threshold: 0.12 });
+  for (const entry of entries) if (entry.isIntersecting) {
+    entry.target.classList.add("visible");
+    revealObserver.unobserve(entry.target);
+  }
+}, { threshold: 0.04 });
 document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
 
 const sections = [...document.querySelectorAll("main section[id]")];
@@ -197,4 +219,4 @@ contactForm.addEventListener("submit", (event) => {
 
 const topButton = document.querySelector(".to-top");
 window.addEventListener("scroll", () => topButton.classList.toggle("visible", window.scrollY > 600), { passive: true });
-topButton.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+topButton.addEventListener("click", () => window.scrollTo({ top: 0, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" }));

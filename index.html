@@ -5,23 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ElderMeds | Multimodal AI for Intelligent Medication Adherence</title>
     <meta name="description" content="ElderMeds is a multimodal elder-care research platform integrating intelligent medication reminders, verified medication intake, medication-safety reasoning, emotional and cognitive support, risk-awareness, caregiver monitoring and conversational health-data access." />
-    <meta name="theme-color" content="#0f766e" />
+    <meta name="theme-color" content="#347fcf" />
     <meta property="og:title" content="ElderMeds | Multimodal AI for Intelligent Medication Adherence" />
     <meta property="og:description" content="A coordinated healthcare AI research platform for medication adherence, safety reasoning, caregiver monitoring, and retrieval-grounded access to longitudinal health records." />
     <meta property="og:type" content="website" />
     <link rel="canonical" href="/" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f766e'/%3E%3Cpath d='M18 36c8 10 20 12 29-3 5-8-1-19-12-16-5 1-8 5-9 9' fill='none' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M18 28h14M25 21v14' stroke='%2399f6e4' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="src/experience.css" />
+    <link rel="stylesheet" href="src/brand.css" />
+    <link rel="stylesheet" href="src/motion.css" />
+    <link rel="stylesheet" href="src/research-gap.css" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header" id="top">
       <nav class="navbar" aria-label="Primary navigation">
         <a class="brand" href="#home" aria-label="ElderMeds home">
-          <img class="brand-logo" src="public/images/logo.png" alt="" aria-hidden="true" />
-          <span><strong>ElderMeds</strong><small>SLIIT Research</small></span>
+          <span class="brand-mark"><img src="public/images/logo.png" alt="" aria-hidden="true" /></span>
+          <span><strong><span>Elder</span><span>Meds</span></strong><small>Connected care. Everyday.</small></span>
         </a>
-        <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+        <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">
           <span></span><span></span><span></span>
         </button>
         <div class="nav-links" id="navLinks">
@@ -60,30 +64,59 @@
         <div class="hero-inner">
           <div class="hero-copy reveal">
             <p class="eyebrow">SLIIT Research Project 2025-2026</p>
-            <h1>ElderMeds</h1>
-            <h2>Intelligent medication support, designed around older adults.</h2>
+            <h1>A little support.<br>A more <em>confident</em><br>everyday.</h1>
+            <h2>Intelligent care. Human connection.</h2>
             <p>A multimodal voice-vision assistant that brings medication adherence, safety reasoning, caregiver awareness, and supportive engagement into one connected research platform.</p>
             <div class="hero-actions">
-              <a class="button primary" href="#components">Explore the Research</a>
-              <a class="button secondary" href="#paper">Read the Paper</a>
+              <a class="button primary" href="#experience">Explore ElderMeds <span data-icon="arrow"></span></a>
+              <a class="button secondary" href="#paper"><span data-icon="file"></span> Read the Paper</a>
             </div>
+            <div class="hero-assurance"><span data-icon="heart"></span> Designed around older adults. Connected to those who care.</div>
           </div>
+          <div class="care-note"><span class="note-icon" data-icon="shield"></span><div><small>OUR RESEARCH VISION</small><strong>Care that stays connected.</strong><span>From daily reminders to caregiver awareness.</span></div></div>
         </div>
+      </section>
+
+      <div class="research-strip" aria-label="Project overview"><span><span data-icon="graduation"></span> SLIIT Research <b>2025–2026</b></span><span><span data-icon="grid"></span> Four connected components</span><span><span data-icon="users"></span> Built around people</span><a href="#achievements">Discover our research <span data-icon="arrow"></span></a></div>
+
+      <section class="section experience" id="experience">
+        <div class="section-heading reveal"><p class="eyebrow">A closer look</p><h2>One day. Many moments of care.</h2><p>Explore how the ElderMeds research brings everyday medication support and meaningful connection together.</p></div>
+        <div class="experience-layout reveal">
+          <div class="experience-tabs" role="tablist" aria-label="Explore research components" aria-orientation="vertical">
+            <button id="tab-intake" role="tab" aria-selected="true" aria-controls="experience-panel" data-view="intake"><span data-icon="pill"></span><span><strong>A reassuring routine</strong><small>Reminders &amp; verified intake</small></span><span data-icon="arrow"></span></button>
+            <button id="tab-safety" role="tab" aria-selected="false" tabindex="-1" aria-controls="experience-panel" data-view="safety"><span data-icon="shield"></span><span><strong>A more informed decision</strong><small>Personalized medication safety</small></span><span data-icon="arrow"></span></button>
+            <button id="tab-wellbeing" role="tab" aria-selected="false" tabindex="-1" aria-controls="experience-panel" data-view="wellbeing"><span data-icon="heart"></span><span><strong>A moment of connection</strong><small>Emotional &amp; cognitive engagement</small></span><span data-icon="arrow"></span></button>
+            <button id="tab-records" role="tab" aria-selected="false" tabindex="-1" aria-controls="experience-panel" data-view="records"><span data-icon="chart"></span><span><strong>A clearer picture</strong><small>Connected records &amp; caregiver insight</small></span><span data-icon="arrow"></span></button>
+          </div>
+          <div id="experience-panel" class="experience-panel" role="tabpanel" aria-labelledby="tab-intake" tabindex="0"></div>
+        </div>
+        <p class="demo-disclaimer">Illustrative research walkthrough · Sample information only · No patient data or clinical assessment</p>
       </section>
 
       <section class="section split" id="about">
         <div class="reveal"><p class="eyebrow">The Challenge</p><h2>Medication support needs more than reminders.</h2><p>Medication non-adherence in older adults can be shaped by polypharmacy, memory limitations, changing daily routines, visual or motor limitations, adverse-drug concerns, medication-safety questions, and emotional or social factors.</p><p>Traditional reminder systems mainly answer "When should I take my medicine?" ElderMeds goes further by connecting reminders, verification evidence, safety reasoning, engagement, caregiver visibility, and conversational access through one shared longitudinal context.</p></div>
         <div class="comparison reveal">
-          <h3>Beyond Reminder Apps</h3>
+          <div class="comparison-heading"><span class="comparison-icon" aria-hidden="true">✚</span><div><p class="comparison-kicker">THE CARE JOURNEY</p><h3>Beyond reminder apps</h3></div><span class="comparison-dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
+          <p class="comparison-intro">Medication support means answering more than one question.</p>
           <ul>
             <li>What medicine should I take?</li><li>How many should I take?</li><li>Is this the expected medicine?</li><li>Was the intake workflow completed?</li><li>Is there a medication-safety concern?</li><li>Can my caregiver understand what happened?</li><li>Can I access records conversationally?</li>
           </ul>
+          <div class="comparison-footer"><span class="journey-mark" aria-hidden="true">✓</span><span><strong>One connected care experience</strong><small>Each answer contributes to a shared picture of wellbeing.</small></span><span class="journey-arrow" aria-hidden="true">↗</span></div>
         </div>
       </section>
 
       <section class="section tinted" id="gap">
-        <div class="section-heading reveal"><p class="eyebrow">Research Gap</p><h2>From Fragmented Tools to One Coordinated Elder-Care Platform</h2><p>Many existing systems address medication reminders, recognition, safety, emotional support, disease-risk awareness, caregiver monitoring, or conversational health access separately. ElderMeds targets the fragmentation between these tools through shared patient and medication context.</p></div>
-        <div class="gap-grid reveal"><article>Medication Reminders</article><article>Medication Recognition</article><article>Medication Safety</article><article>Emotional Support</article><article>Disease Risk Awareness</article><article>Caregiver Monitoring</article><article>Conversational Health Access</article></div>
+        <div class="section-heading reveal"><p class="eyebrow">Research Gap</p><h2>Every tool sees a moment.<br>Care needs the whole picture.</h2><p>A reminder knows the time. A camera sees the medicine. A caregiver needs the context. ElderMeds explores how these separate experiences can work together.</p></div>
+        <div class="gap-context"><span>THE DISCONNECTED CARE JOURNEY</span><span>Illustrative interface concepts · Sample content</span></div>
+        <div class="gap-grid reveal">
+          <article><span class="gap-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="7.5"/><path d="M12 9v4l2.5 1.5M8 2.8 6.5 4.3M16 2.8l1.5 1.5"/></svg></span><span class="gap-title">Medication Reminders</span></article>
+          <article><span class="gap-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6.7 16.8 9.9-9.9a3.2 3.2 0 0 1 4.5 4.5l-9.9 9.9a3.2 3.2 0 0 1-4.5-4.5Z"/><path d="m9.2 14.3 4.5 4.5"/></svg></span><span class="gap-title">Medication Recognition</span></article>
+          <article><span class="gap-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 20 6v5.5c0 4.5-3.2 7.8-8 9.5-4.8-1.7-8-5-8-9.5V6l8-3Z"/><path d="m8.5 11.8 2.3 2.3 4.8-5"/></svg></span><span class="gap-title">Medication Safety</span></article>
+          <article><span class="gap-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20.8 8.8c0 5.1-8.8 10.4-8.8 10.4S3.2 13.9 3.2 8.8A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.5Z"/><path d="M7.2 11.5h2.2l1.3-2.2 2.1 4 1.2-1.8h2.8"/></svg></span><span class="gap-title">Emotional Support</span></article>
+          <article><span class="gap-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12h4l2.2-5 4.1 10 2.3-5H21"/><path d="M12 3.5v2M12 18.5v2"/></svg></span><span class="gap-title">Disease Risk Awareness</span></article>
+          <article><span class="gap-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3.5 19v-1.2A4.8 4.8 0 0 1 8.3 13h1.4a4.8 4.8 0 0 1 4.8 4.8V19ZM16 5.4a3 3 0 0 1 0 5.8M17 13h.7a3.8 3.8 0 0 1 3.8 3.8V19h-3"/></svg></span><span class="gap-title">Caregiver Monitoring</span></article>
+          <article><span class="gap-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H6l-3 2v-9.5a7.5 7.5 0 0 1 7.5-7.5h2A7.5 7.5 0 0 1 20 11.5Z"/><path d="M8 12h.01M12 12h.01M16 12h.01"/></svg></span><span class="gap-title">Conversational Health Access</span></article>
+        </div>
       </section>
 
       <section class="section" id="research-problem-solution">
@@ -336,12 +369,15 @@
     </main>
 
     <footer class="footer">
-      <div><a class="brand" href="#home"><img class="brand-logo" src="public/images/logo.png" alt="" aria-hidden="true" /><span><strong>ElderMeds</strong><small>SLIIT Research</small></span></a><p>A coordinated multimodal elder-care research platform for medication adherence, safety reasoning, supportive engagement, and grounded health-record access.</p></div>
+      <div><a class="brand" href="#home" aria-label="ElderMeds home"><span class="brand-mark"><img src="public/images/logo.png" alt="" aria-hidden="true" /></span><span><strong><span>Elder</span><span>Meds</span></strong><small>Connected care. Everyday.</small></span></a><p>A coordinated multimodal elder-care research platform for medication adherence, safety reasoning, supportive engagement, and grounded health-record access.</p></div>
       <div><h3>Quick Links</h3><a href="#about">About</a><a href="#components">Components</a><a href="#results">Results</a><a href="#team">Team</a></div>
       <div><h3>Research Links</h3><a href="#documents">Documents</a><a href="#presentations">Presentations</a><a href="#achievements">Achievements</a><a href="#paper">Research Paper</a></div>
       <p class="copyright">&copy; 2026 ElderMeds Research Team. All rights reserved.</p>
     </footer>
     <button class="to-top" aria-label="Scroll to top" title="Back to top">&#8593;</button>
     <script type="module" src="script.js"></script>
+    <script type="module" src="src/experience.js"></script>
+    <script type="module" src="src/motion.js"></script>
+    <script type="module" src="src/research-gap.js"></script>
   </body>
 </html>
