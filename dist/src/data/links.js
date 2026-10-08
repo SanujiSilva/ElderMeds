@@ -1,4 +1,5 @@
 export const researchLinks = {
+  journalDriveUrl: "https://drive.google.com/file/d/1dKIOa5F5TwsG1hU1EvTubDkU9WH834Cv/view?usp=sharing",
   checklistsDriveUrl: "https://drive.google.com/drive/folders/1AFNlONPgA2hXlhy2DuISpWSTUINp5vVV?usp=sharing",
   tafDriveUrl: "https://drive.google.com/drive/folders/1T7VYYTCJLLJtA64S3EUPfFKgcOMyL5gk?usp=sharing",
   proposalDriveUrl: "https://drive.google.com/drive/folders/1weoAPTPL2IdI_Qpd81i9djwCbMN79AYu?usp=sharing",

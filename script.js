@@ -142,10 +142,11 @@ function linkButton(url, label) {
 
 const projectDocuments = [
   ["TAF", "Topic Assessment Form", "Research topic, initial scope, problem context, and proposed direction.", researchLinks.tafDriveUrl],
-  ["Proposal", "Proposal Report", "Research gap, objectives, methodology, architecture, and four component proposals.", researchLinks.proposalDriveUrl],
-  ["Final", "Final Report", "Complete implementation, evaluation results, limitations, and future research directions.", researchLinks.finalReportDriveUrl],
+  ["Proposal", "Proposal Reports", "Research gap, objectives, methodology, architecture, and four component proposals.", researchLinks.proposalDriveUrl],
+  ["Final", "Final Reports", "Complete implementation, evaluation results, limitations, and future research directions.", researchLinks.finalReportDriveUrl],
   ["Paper", "Research Paper", "The consolidated ElderMeds paper accepted for ICSCDS 2026 presentation and publication.", researchLinks.researchPaperDriveUrl || researchLinks.researchPaperUrl],
-  ["Check Lists", "Check Lists", "Supporting research check lists for project requirements, deliverables, and review.", researchLinks.checklistsDriveUrl]
+  ["Check Lists", "Check Lists", "Supporting research check lists for project requirements, deliverables, and review.", researchLinks.checklistsDriveUrl],
+  ["Journal", "Journal", "The ElderMeds journal manuscript submitted to Discover Artificial Intelligence, Springer Nature, for review.", researchLinks.journalDriveUrl]
 ];
 
 document.querySelector("#resourceGrid").innerHTML = projectDocuments.map(([type, title, description, url]) => `
