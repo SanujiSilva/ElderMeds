@@ -20,6 +20,18 @@ window.addEventListener("pageshow", () => {
   else window.scrollTo(0, 0);
 });
 
+const milestoneSelect = document.querySelector("#milestoneSelect");
+const milestoneItems = [...document.querySelectorAll("#milestoneDetails > article")];
+function selectMilestone() {
+  milestoneItems.forEach((item) => {
+    item.hidden = milestoneSelect.value !== "all" && item.id !== milestoneSelect.value;
+  });
+}
+milestoneSelect.closest(".milestone-picker").hidden = false;
+milestoneSelect.value = "milestone-1";
+milestoneSelect.addEventListener("change", selectMilestone);
+selectMilestone();
+
 const results = [
   {
     title: "Component 1 – Intelligent Medication Reminder & Intake Verification",
