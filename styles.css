@@ -348,7 +348,7 @@ td { color: #48575e; font-size: 14px; }
 .group-id strong { color: var(--teal-900); font-size: 17px; }
 .team-block > h3 { margin: 0 0 18px; color: var(--teal-900); font-size: 17px; text-transform: uppercase; letter-spacing: 0.08em; }
 .team-grid { grid-template-columns: repeat(4, 1fr); }
-.supervisors { max-width: 900px; grid-template-columns: repeat(3, 1fr); }
+.supervisors { max-width: none; grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .member { position: relative; overflow: hidden; min-width: 0; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 6px; background: #fff; box-shadow: 0 4px 16px rgba(18, 63, 58, 0.06); transition: transform 180ms ease, box-shadow 180ms ease; }
 .member:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
 .photo-wrap { position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; background: #dfece8; }

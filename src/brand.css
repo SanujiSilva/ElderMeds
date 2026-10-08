@@ -115,6 +115,27 @@ body { background: var(--page); }
 #results .section-heading p:not(.eyebrow) { color: #c9dce7; }
 .metric strong { color: #99d5b6; font-variant-numeric: tabular-nums; }
 .metric p { color: #c7dbe6; }
+#results .results-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; }
+#results .evaluation-card { min-width: 0; padding: 24px; }
+#results .evaluation-card h3 { color: #fffef2; font-size: 18px; line-height: 1.5; margin: 0 0 22px; }
+#results .evaluation-card table { min-width: 0; table-layout: fixed; }
+#results .evaluation-card th, #results .evaluation-card td { padding: 11px 0; border-color: #ffffff20; background: transparent; color: #e0edf5; font-size: 13px; text-transform: none; letter-spacing: normal; overflow-wrap: anywhere; }
+#results .evaluation-card th { width: 60%; padding-right: 12px; font-weight: 500; }
+#results .evaluation-card thead th { font-weight: 750; }
+#results .evaluation-card td { color: #99d5b6; font-weight: 700; font-variant-numeric: tabular-nums; }
+#results .evaluation-card p { font-size: 14px; line-height: 1.65; }
+#results .evaluation-card p b { font-size: inherit; text-transform: none; letter-spacing: normal; }
+#results .disease-results .table-wrap { margin-top: 22px; border: 0; border-radius: 0; background: transparent; }
+#results .disease-results table { min-width: 760px; table-layout: auto; }
+#results .disease-results caption { padding: 0 0 16px; color: #e0edf5; font-size: 14px; }
+#results .disease-results th, #results .disease-results td { width: auto; padding: 11px 16px; }
+#results .disease-results th:first-child { padding-left: 0; }
+#results .disease-results th:last-child, #results .disease-results td:last-child { padding-right: 0; }
+#results .disease-result-note { margin-top: 20px; }
+#results .evaluation-actions { margin-top: 24px; }
+@media (max-width: 1100px) {
+  #results .results-grid { grid-template-columns: 1fr; }
+}
 .metric b { color: #e0edf5; }
 .tech-cloud span { border-color: #dbe7ee; box-shadow: 0 3px 0 #e7eef3; }
 .acceptance-mark { background: radial-gradient(circle at 50% 35%,#3679a3,#224965 75%); }

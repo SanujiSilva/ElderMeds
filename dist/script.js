@@ -4,21 +4,38 @@ if ("scrollRestoration" in history) {
   history.scrollRestoration = "manual";
 }
 
-window.addEventListener("beforeunload", () => {
-  window.scrollTo(0, 0);
-});
+const isPageReload = performance.getEntriesByType("navigation")[0]?.type === "reload";
+
+if (isPageReload && location.hash) {
+  history.replaceState(history.state, "", location.pathname + location.search);
+}
 
 window.addEventListener("pageshow", () => {
+  if (isPageReload) {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    return;
+  }
   const target = document.getElementById(location.hash.slice(1));
   if (target) target.scrollIntoView();
   else window.scrollTo(0, 0);
 });
 
 const results = [
-  ["Component 01 · Verified Intake", "Pill-counting F1", "0.9803", "YOLO11n evaluation on an 860-image held-out test set; exact-count accuracy 0.9093."],
-  ["Component 02 · Medication Safety", "Safety ML ROC-AUC", "0.9544", "Tuned Logistic Regression evaluated on the FAERS serious/non-serious hold-out set."],
-  ["Component 03 · Engagement", "Emotion Macro F1", "0.8166", "Emotion classifier evaluated on an independent frozen 140-response domain set."],
-  ["Component 04 · Unified Dashboard", "Integrated record domains", "8", "Medication, adherence, safety, emotional, routine, caregiver, conversation, and disease-risk records."]
+  {
+    title: "Component 1 – Intelligent Medication Reminder & Intake Verification",
+    metrics: [["Model", "YOLO11n"], ["Accuracy", "96.74%"], ["Precision", "98.87%"], ["Recall", "97.21%"], ["F1-score", "98.03%"], ["Exact-count accuracy", "90.93%"], ["Test images", "860"]],
+    note: "High pill-detection performance, with medication counting and verification supported by visual evidence."
+  },
+  {
+    title: "Component 2 – Personalized Medication Safety & Risk Assessment",
+    metrics: [["ML model", "Tuned Logistic Regression"], ["ML accuracy", "86.88%"], ["ML recall", "98.17%"], ["ML F1-score", "91.80%"], ["Hybrid controller accuracy", "81.55%"], ["Dangerous-class precision", "82.20%"], ["Dangerous-class recall", "97.50%"], ["Dangerous-class false-negative rate", "2.50%"]],
+    note: "The hybrid rule–ML controller achieved high sensitivity to Dangerous cases in proxy-labelled evaluation. Clinical validation is still required."
+  },
+  {
+    title: "Component 3 – Emotional & Cognitive Engagement Support",
+    metrics: [["Model", "MiniLM emotion classifier"], ["Accuracy", "81.43%"], ["Macro precision", "82.78%"], ["Macro recall", "81.43%"], ["Macro F1-score", "81.66%"], ["Macro specificity", "96.90%"], ["Test responses", "140"], ["Emotion categories", "7"]],
+    note: "Effective classification of seven emotional states to support adaptive conversations and personalized engagement activities."
+  }
 ];
 
 const team = [
@@ -31,7 +48,8 @@ const team = [
 const supervisors = [
   { name: "Prof. Samantha Thelijjagoda", initials: "ST", role: "Supervisor", department: "Department of Computer Systems Engineering", email: "samantha.t@sliit.lk", linkedin: "https://www.linkedin.com/in/samantha-thelijjagoda-84342037/", photo: "public/images/team/samantha-thelijjagoda.png" },
   { name: "Ms. Hansi De Silva", initials: "HD", role: "Co-Supervisor", department: "Department of Software Engineering", email: "hansi.d@sliit.lk", linkedin: "https://www.linkedin.com/in/hansi-de-silva-03629b79/", photo: "public/images/team/hansi-de-silva.png" },
-  { name: "Mr. Jagath Kodagoda", initials: "JK", role: "External Supervisor", department: "Director of Victoria Home for Incurables", photo: "public/images/team/jagath-kodagoda.png" }
+  { name: "Mr. Jagath Kodagoda", initials: "JK", role: "External Supervisor", department: "Director of Victoria Home for Incurables", photo: "public/images/team/jagath-kodagoda.png" },
+  { name: "Dr. Sunil H. Pathegama", initials: "SP", role: "External Supervisor", department: "Primary Medical Care Unit, Weligama", institution: "University of Colombo", location: "Matara", photo: "public/images/team/sunil-pathegama.jpg" }
 ];
 
 const navToggle = document.querySelector(".nav-toggle");
@@ -84,7 +102,7 @@ document.addEventListener("click", (event) => {
   }
 });
 
-document.querySelector("#resultsGrid").innerHTML = results.map(([title, metric, value, note]) => `<article class="metric"><span>${title}</span><strong>${value}</strong><b>${metric}</b><p>${note}</p></article>`).join("");
+document.querySelector("#resultsGrid").innerHTML = results.map(({ title, metrics, note }) => `<article class="metric evaluation-card"><h3>${title}</h3><table><thead><tr><th scope="col">Evaluation metric</th><th scope="col">Result</th></tr></thead><tbody>${metrics.map(([label, value]) => `<tr><th scope="row">${label}</th><td>${value}</td></tr>`).join("")}</tbody></table><p><b>Key result:</b> ${note}</p></article>`).join("");
 function memberCard(member) {
   const role = member.role ? `<span class="role-badge">${member.role}</span>` : "";
   const studentMeta = member.studentId ? `<p class="student-meta"><strong>${member.studentId}</strong><span>${member.indexedName}</span></p>` : "";
@@ -99,15 +117,15 @@ function memberCard(member) {
     : "";
   return `
   <article class="member">
-    <div class="photo-wrap">
-      <img src="${member.photo}" alt="${member.name}" loading="lazy" onerror="this.remove(); this.parentElement.classList.add('missing-photo');" />
+    <div class="photo-wrap${member.photo ? "" : " missing-photo"}">
+      ${member.photo ? `<img src="${member.photo}" alt="${member.name}" loading="lazy" onerror="this.remove(); this.parentElement.classList.add('missing-photo');" />` : ""}
       <span class="avatar" aria-hidden="true">${member.initials}</span>
     </div>
     <div class="member-body">
       ${role}
       <h3>${member.name}</h3>
       ${studentMeta}
-      <p>${member.department}<br>Sri Lanka Institute of Information Technology</p>
+      <p>${member.department}<br>${member.institution || "Sri Lanka Institute of Information Technology"}${member.location ? `<br>${member.location}` : ""}</p>
       ${contactLinks}
     </div>
   </article>
@@ -126,7 +144,8 @@ const projectDocuments = [
   ["TAF", "Topic Assessment Form", "Research topic, initial scope, problem context, and proposed direction.", researchLinks.tafDriveUrl],
   ["Proposal", "Proposal Report", "Research gap, objectives, methodology, architecture, and four component proposals.", researchLinks.proposalDriveUrl],
   ["Final", "Final Report", "Complete implementation, evaluation results, limitations, and future research directions.", researchLinks.finalReportDriveUrl],
-  ["Paper", "Research Paper", "The consolidated ElderMeds paper accepted for ICSCDS 2026 presentation and publication.", researchLinks.researchPaperDriveUrl || researchLinks.researchPaperUrl]
+  ["Paper", "Research Paper", "The consolidated ElderMeds paper accepted for ICSCDS 2026 presentation and publication.", researchLinks.researchPaperDriveUrl || researchLinks.researchPaperUrl],
+  ["Check Lists", "Check Lists", "Supporting research check lists for project requirements, deliverables, and review.", researchLinks.checklistsDriveUrl]
 ];
 
 document.querySelector("#resourceGrid").innerHTML = projectDocuments.map(([type, title, description, url]) => `

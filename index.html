@@ -287,7 +287,25 @@
       <section class="section" id="results">
         <div class="section-heading reveal"><p class="eyebrow">Evaluation</p><h2>Results Reported by Evidence Type</h2><p>ElderMeds does not present one whole-system accuracy. Each metric remains tied to its subsystem, dataset, and validation scope.</p></div>
         <div class="results-grid reveal" id="resultsGrid"></div>
-        <div class="table-wrap reveal"><table><caption>Disease-risk prediction results used only for bounded risk-awareness</caption><thead><tr><th>Model</th><th>Algorithm</th><th>Accuracy</th><th>Precision</th><th>Recall</th><th>F1</th><th>ROC-AUC</th></tr></thead><tbody><tr><td>Diabetes</td><td>XGBoost</td><td>0.7427</td><td>0.7195</td><td>0.7954</td><td>0.7556</td><td>0.8204</td></tr><tr><td>Stroke</td><td>Logistic Regression</td><td>0.7466</td><td>0.1384</td><td>0.8000</td><td>0.2360</td><td>0.8426</td></tr><tr><td>Hypertension</td><td>Decision Tree</td><td>0.5205</td><td>0.7226</td><td>0.5405</td><td>0.6184</td><td>0.5031</td></tr></tbody></table></div>
+        <article class="metric evaluation-card disease-results reveal" aria-labelledby="disease-results-title">
+          <h3 id="disease-results-title">Component 4 &ndash; Unified Conversational Dashboard &amp; Disease-Risk Awareness</h3>
+          <p>The system evaluates three diseases: Diabetes, Stroke, and Hypertension.</p>
+          <div class="table-wrap" tabindex="0" role="region" aria-label="Disease-risk prediction results">
+            <table>
+              <caption>Disease-Risk Prediction Results</caption>
+              <thead><tr><th scope="col">Disease</th><th scope="col">Selected algorithm</th><th scope="col">Accuracy</th><th scope="col">Precision</th><th scope="col">Recall</th><th scope="col">F1-score</th><th scope="col">ROC-AUC</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Diabetes</th><td>XGBoost</td><td>74.27%</td><td>71.95%</td><td>79.54%</td><td>75.56%</td><td>82.04%</td></tr>
+                <tr><th scope="row">Stroke</th><td>Logistic Regression</td><td>74.66%</td><td>13.84%</td><td>80.00%</td><td>23.60%</td><td>84.26%</td></tr>
+                <tr><th scope="row">Hypertension</th><td>Decision Tree</td><td>52.05%</td><td>72.26%</td><td>54.05%</td><td>61.84%</td><td>50.31%</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="disease-result-note"><b>Key result:</b> The dashboard integrates medication, emotional, safety, and disease-risk information through a conversational interface. Disease-risk results are preliminary, particularly for stroke and hypertension.</p>
+        </article>
+        <div class="evaluation-actions reveal">
+          <a class="button secondary" href="https://drive.google.com/drive/folders/1EjejNXKqFf7nZqy7veG6hrQD6eDPqbhf?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="View more evidence on Google Drive (opens in a new tab)">View More Evidence <span aria-hidden="true">&#8599;</span></a>
+        </div>
       </section>
 
       <section class="section tinted" id="technology">
