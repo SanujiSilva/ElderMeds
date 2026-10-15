@@ -96,7 +96,7 @@ svg { width: 22px; height: 22px; flex-shrink: 0; }
 .record-tiles svg { width: 18px; height: 18px; color: #648654; }
 .record-tiles strong, .record-tiles small { display: block; font-size: 11px; }
 .record-tiles small { margin-top: 3px; font-size: 9px; color: var(--muted); }
-.problem-solution-grid article, .objective-grid article, .research-component, .resource, .paper-space, .member, .contact-form, .acceptance-card { border-radius: 16px; }
+.problem-solution-grid article, .objective-grid article, .research-component, .resource, .member, .contact-form, .acceptance-card { border-radius: 16px; }
 .research-component { overflow: hidden; }
 .component-symbol { width: 45px; height: 45px; margin-bottom: 20px; border-radius: 12px; color: #37785b; background: #eaf3e8; }
 .research-component:nth-child(2) .component-symbol { color: #b77659; background: #f9eee8; }
@@ -224,8 +224,6 @@ svg { width: 22px; height: 22px; flex-shrink: 0; }
 .resource { position: relative; background: #fffefa; box-shadow: none; padding: 30px; }
 .resource-symbol { border-radius: 12px; background: #eaf0db; }
 .resource .button { padding: 10px 16px; font-size: 12px; }
-.paper-space { border-radius: 22px; background: #fffefa; box-shadow: none; }
-.paper-viewer { border-radius: 12px; }
 .contact { background: radial-gradient(ellipse at 5% 90%,#355537,#183f33 60%); }
 .contact h2 { color: #fffef2; font-size: clamp(34px,4vw,51px); }
 .contact .eyebrow { color: #d6ed91; }

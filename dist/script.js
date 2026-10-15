@@ -167,15 +167,6 @@ document.querySelector("#resourceGrid").innerHTML = projectDocuments.map(([type,
 
 document.querySelector("#presentationAction").innerHTML = linkButton(researchLinks.presentationsDriveUrl, "View Presentation Files");
 
-const paperUrl = researchLinks.researchPaperUrl;
-document.querySelector("#paperActions").innerHTML = `
-  ${linkButton(paperUrl, "Open Paper")}
-  ${linkButton(paperUrl, "Download Paper")}
-`;
-document.querySelector("#paperViewer").innerHTML = paperUrl
-  ? `<iframe title="ElderMeds research paper PDF" src="${paperUrl}"></iframe>`
-  : `<div class="paper-placeholder"><strong>Research paper coming soon</strong><p>Add the PDF URL in <code>src/data/links.js</code>.</p></div>`;
-
 document.documentElement.classList.add("motion-ready");
 // Reveal individual cards rather than waiting for a tall mobile grid to enter view.
 document.querySelectorAll('.gap-grid.reveal, .cards.reveal, .results-grid.reveal, .architecture.reveal, .resource-grid.reveal, .milestone-track.reveal, .objective-grid.reveal, .team-block.reveal').forEach(group => {
