@@ -1,6 +1,6 @@
 # ElderMeds Research Website
 
-**ElderMeds: A Multimodal Voice Vision Based Intelligent Assistant for Medication Adherence**
+**Research title:** A Multimodal Voice Vision Based Intelligent Assistant for Medication Adherence
 
 ElderMeds is a research project exploring intelligent medication support and wellbeing for older adults. This repository contains the project's public research website, presenting the research problem, objectives, methodology, four research components, evaluation results, milestones, documents, and team.
 

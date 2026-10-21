@@ -276,6 +276,12 @@ p, h2, h3, dd, .student-meta, .acceptance-meta { overflow-wrap: break-word; }
 }
 .nav-links > a:last-child { color: #246844; background: #edf8f1; border-color: #cce6d6; }
 .hero .eyebrow { color: #286b4b; background: #f5fcf8e6; border-color: #cce6d6; }
+.hero .research-title-label { display: block; margin-bottom: 14px; color: #d6ed91; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.hero .research-title-heading { max-width: 660px; font-size: clamp(38px, 4.2vw, 59px); line-height: 1.12; letter-spacing: -.04em; text-wrap: balance; }
+.hero .research-title-heading + h2 { margin-top: 24px; }
+@media (max-width: 760px) {
+  .hero .research-title-heading { font-size: clamp(30px, 7.5vw, 43px); letter-spacing: -.035em; }
+}
 .care-note { border-color: #d6ebde; }
 .care-note::before { border-color: #dceee3; }
 .research-strip > span:nth-child(2) svg,
